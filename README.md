@@ -23,6 +23,10 @@ All results are stored in **SQLite relational databases** (SQL-based, table-stru
 1. Clone the repository
 2. Install dependencies: `pip install -r requirements.txt`
 
+**Note on Large Database Files**: The `route_events.db` file (1.4GB) is too large for standard GitHub storage and is excluded from the repository. To obtain this database:
+- Generate it locally by running `src/create_route_events_database.py`
+- Or use Git LFS if you need to version control it (install Git LFS first: https://git-lfs.github.com/)
+
 ### Database Architecture & Contents
 
 The project maintains four distinct **SQLite relational databases** (SQL-based, table-structured), each serving a specific purpose. Each database stores data in structured tables with defined schemas:
