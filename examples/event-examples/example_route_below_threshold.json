@@ -1,0 +1,8 @@
+{
+  "route_id": 16269,
+  "counties": "South Sierra Foothills,SOUTHERN HUMBOLDT INTERIOR,WEST SIDE MOUNTAINS NORTH OF HIGHWAY 198,IMPERIAL COUNTY SOUTHWEST,MARIPOSA,SACRAMENTO",
+  "impact_score": 0.24999626240332784,
+  "impacting_delivery": 0,
+  "threshold": 0.25,
+  "above_threshold": false
+}

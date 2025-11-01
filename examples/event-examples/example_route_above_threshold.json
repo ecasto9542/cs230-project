@@ -1,0 +1,8 @@
+{
+  "route_id": 11521,
+  "counties": "UPPER TRINITY RIVER,INYO,SAN BENITO",
+  "impact_score": 0.3201275597302353,
+  "impacting_delivery": 1,
+  "threshold": 0.25,
+  "above_threshold": true
+}
