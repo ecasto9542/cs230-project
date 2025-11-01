@@ -207,9 +207,14 @@ marimo/_lsp/
 __marimo__/
 
 # Data files
-data/
+# Allow database files to be tracked
+!data/*.db
+data/*
 *.csv
 *.zip
+
+# Large JSON export files
+examples/database_exports/
 
 # Model artifacts
 models/
