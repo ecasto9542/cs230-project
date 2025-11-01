@@ -23,9 +23,36 @@ All results are stored in **SQLite relational databases** (SQL-based, table-stru
 1. Clone the repository
 2. Install dependencies: `pip install -r requirements.txt`
 
-**Note on Large Database Files**: The `route_events.db` file (1.4GB) is too large for standard GitHub storage and is excluded from the repository. To obtain this database:
-- Generate it locally by running `src/create_route_events_database.py`
-- Or use Git LFS if you need to version control it (install Git LFS first: https://git-lfs.github.com/)
+#### Recreating Database Structures
+
+**What's Already Included:**
+After cloning, you'll have 3 databases in `data/`:
+- ✅ `california_events.db` - All California weather events (24,039 events)
+- ✅ `delivery_routes.db` - All delivery routes (20,000 routes)
+- ✅ `routes_scores.db` - Labeled dataset with impact scores
+
+**To Recreate the Missing Database:**
+
+The `route_events.db` file (1.4GB) is too large for GitHub and is excluded. To recreate it locally, run:
+
+```bash
+python src/create_route_events_database.py
+```
+
+This script requires:
+- `data/california_events.db` ✅ (already included)
+- `data/delivery_routes.db` ✅ (already included)
+
+It will create `data/route_events.db` by:
+1. Copying routes from `delivery_routes.db`
+2. Copying events from `california_events.db`
+3. Creating route-event links based on county matching
+
+**Note**: If you want to regenerate `routes_scores.db` with fresh impact scores, you would also need to run:
+1. `python src/assess_all_routes.py` (calculates scores in `route_events.db`)
+2. `python src/create_routes_scores_database.py` (extracts scores to `routes_scores.db`)
+
+However, `routes_scores.db` is already included in the repository, so this is only needed if you want to recalculate scores.
 
 ### Database Architecture & Contents
 
