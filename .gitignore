@@ -207,9 +207,14 @@ marimo/_lsp/
 __marimo__/
 
 # Data files
-# Allow database files to be tracked
-!data/*.db
-data/*
+# Exclude the very large route_events.db (use Git LFS or alternative storage)
+data/route_events.db
+# Allow other database files to be tracked (negation must come before data/*)
+!data/california_events.db
+!data/delivery_routes.db
+!data/routes_scores.db
+!data/
+data/
 *.csv
 *.zip
 
