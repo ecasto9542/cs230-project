@@ -401,3 +401,6 @@ Routes are labeled as impacting delivery based on threshold:
 - `src/list_events.py` - List and browse events in the database
 - `src/count_california_events.py` - Count total California events available
 - `src/get_data.py` - Downloads NOAA storm event CSV files (optional, only needed to rebuild database)
+  
+**Notebooks:**
+- `notebooks/logreg_baseline.ipynb` - Logistic Regression baseline model includes preprocessing, model training, evaluation (AUPRC, Brier score), and feature importance.
