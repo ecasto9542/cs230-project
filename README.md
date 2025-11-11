@@ -404,3 +404,4 @@ Routes are labeled as impacting delivery based on threshold:
   
 **Notebooks:**
 - `notebooks/logreg_baseline.ipynb` - Logistic Regression baseline model includes preprocessing, model training, evaluation (AUPRC, Brier score), and feature importance.
+- `notebooks/random_forest.ipynb` - Random Forest model includes preprocessing, model training, evaluation (AUPRC, Brier score), and feature importance.
