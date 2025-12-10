@@ -6,7 +6,7 @@ This project extracts weather events from NOAA's storm events database, stores t
 
 ## Dataset
 
-All inputs are stored as SQLite files under data/:
+All inputs are stored as SQLite files under ```data/```:
 * california_events.db: historical weather events (24k entries)
 * delivery_routes.db: generated routes without labels
 * route_events.db: route–event associations (not included due to size)
